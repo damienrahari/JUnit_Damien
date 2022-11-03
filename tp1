@@ -8,28 +8,37 @@ import org.junit.jupiter.api.Test;
 
 import exerciceTest.Calculatrice;
 
-class CalculatriceTest {
+class Test {
 	
-	@BeforeAll public static void beforeAll()
-	{
-	System.out.println("beforeAll");
+	//Tp1
+	//--------------------- 
+	@BeforeAll
+	public static void beforeAll() {
+		System.out.println("beforeAll 0");
 	}
 
-	@AfterAll public static void afterAll()
-	{
-	System.out.println("afterAll");
+	@AfterAll
+	public static void afterAll() {
+		System.out.println("afterAll 2");
 	}
 
-	@BeforeEach public void beforeEach()
-	{
-	System.out.println("beforeEach");
+	@BeforeEach
+	public void beforeEach() {
+		System.out.println("beforeEach 3");
 	}
 
 	@AfterEach
-	public void afterEach()
-	{
-	System.out.println("afterEach");
+	public void afterEach() {
+		System.out.println("afterEach 4");
 	}
+
+	@Test
+	public void testadd() {
+		System.out.println("test 1");
+	}
+	
+	//Calculatrice
+	//------------------
 	
 	@Test
 	public void testadd() {
@@ -37,5 +46,7 @@ class CalculatriceTest {
 		int resultat = calculatrice.add(1,2);
 		System.out.println(resultat);
 	}
+	//
+	------------------
 }
 
