@@ -14,6 +14,21 @@ class CalculatriceTest {
 		assertTrue(resultat,"attend que le resultat est pair");
 		
 	}
+	@Test
+	@DisplayName("Test les calculatrices sont les mêmes")
+	void testMemeCalculatrice() {
+		Calculatrice calc1 = new Calculatrice();
+		Calculatrice calc2 = calc1.copy();
+		assertSame(calc1, calc2, "Les calculatrices sont les mêmes");
+	}
+	
+	@Test
+	@DisplayName("Test les calculatrices ne sont pas les mêmes")
+	void testPasMemeCalculatrice() {
+		Calculatrice calc1 = new Calculatrice();
+		Calculatrice calc2 = new Calculatrice();
+		assertNotSame(calc1, calc2, "Les calculatrices sont les mêmes");
+	}
 	
 
 }
